@@ -104,14 +104,14 @@ helpers.neovim-plugin.mkNeovimPlugin config {
       }
     ) cfg.keymaps;
 
-    extraConfigLua = ''
-      require('telescope').setup(${helpers.toLuaObject cfg.settings})
-
-      local __telescopeExtensions = ${helpers.toLuaObject cfg.enabledExtensions}
-      for i, extension in ipairs(__telescopeExtensions) do
-        require('telescope').load_extension(extension)
-      end
-    '';
+#    extraConfigLua = ''
+#      require('telescope').setup(${helpers.toLuaObject cfg.settings})
+#
+#      local __telescopeExtensions = ${helpers.toLuaObject cfg.enabledExtensions}
+#      for i, extension in ipairs(__telescopeExtensions) do
+#        require('telescope').load_extension(extension)
+#      end
+#    '';
   };
 
   settingsOptions = {
