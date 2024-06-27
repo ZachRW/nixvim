@@ -56,7 +56,7 @@ rec {
       extraConfig ? cfg: { },
       extraPlugins ? [ ],
       extraPackages ? [ ],
-      callSetup ? true,
+      callSetup ? false,
     }:
     let
       namespace = if isColorscheme then "colorschemes" else "plugins";
